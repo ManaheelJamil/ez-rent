@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'tailwindcss/tailwind.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: Montserrat;
+}
+
+@layer  {
+  .wrap {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .text {
+    @apply text-yellow-500 inline-block ml-1;
+  }
+
+  .bounceball {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width:15px; /* Adjust the width as needed */
+  }
+  
+  .bounceball:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 25px; /* Adjust the width as needed */
+    height: 20px;
+    border-radius: 50%;
+    background-color: #404EED;
+    transform-origin: 50%;
+    animation: bounce 500ms alternate infinite ease;
+  }
+  
+
+  @keyframes bounce {
+    0% {
+      top: 70px;
+      height: 5px;
+      border-radius: 60px 60px 20px 20px;
+      transform: scaleX(2);
+    }
+
+    35% {
+      height: 15px;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+
+    100% {
+      top: 0;
+    }
+  }
+
+
+  .animate-bounce {
+    animation: bounce 500ms alternate infinite ease;
+  }
+
+  .bg1 {
+    background-image: url("/game1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50px;
+  }
+
+  .bg2 {
+    background-image: url("/game2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50px;
+  }
+
+  .bg3 {
+    background-image: url("/game3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50px;
+  }
+
+  .bg4 {
+    background-image: url("/game4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50px;
+  }
+
+  .bg-image {
+    background-image: url("/image3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50px;
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .remove-arrow::-webkit-inner-spin-button,
+  .remove-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .remove-arrow {
+    -moz-appearance: textfield;
+  }
+
+  /* navbar */
+  .test {
+    font-size: 16px !important
+  }
+
+  .navbar {
+    @apply fixed top-0 left-0 right-0 w-full flex justify-around items-center bg-white md:border-[#CACACA] border-x-transparent border
+  }
+
+  .mobile-navbar {
+    @apply flex flex-col md:hidden block absolute top-0 left-0 right-0 fixed justify-between
+  }
+
+  /*  product-page-styling  */
+
+  .product {
+    @apply md:mt-44 mt-28 grid md:grid-cols-3 mx-auto text-center
+  }
+
+  .product-heading {
+    @apply md:col-span-2 text-center md:text-start
+  }
+
+  .search-icon {
+    @apply xl:text-3xl lg:text-2xl text-xl md:mx-6 ml-7 mr-3
+  }
+
+  .shade {
+    border: 1px solid #CACACA;
+    box-shadow: 0px 4px 16px 0px #0000001A;
+
+  }
+
+  .gradient {
+    background: linear-gradient(180deg, #404EED 0%, #000000 100%);
+
+  }
+
+  .box-shadow {
+    box-shadow: 0px 10px 21px 0px #00000026;
+
+    border: 0.5px solid #CACACA
+  }
+
+  .button-shadow {
+    box-shadow: 0px 11px 45px 0px #0F172A33;
+
+  }
+
+  .border {
+    box-shadow: 0px 0px 20px 0px #0000000A;
+    border: 0.2px solid #000000
+  }
+
+  .shadow {
+    box-shadow: 0px 4px 16px 0px #0000001A;
+    border: 1px solid #CACACA;
+
+  }
+
+  /* Login page styling */
+  .main-box {
+    @apply lg:flex md:gap-0 lg:gap-10 xl:gap-0 2xl:gap-0 mx-auto items-center
+  }
+
+  .left-side {
+    @apply 2xl:w-[50%] xl:w-[50%] rounded-[20px] bg-[#404EED] ml-5 lg:flex lg:block hidden lg:flex-col justify-center place-items-center h-[95%] my-auto
+  }
+
+  .ez-rent-logo {
+    @apply 2xl:w-[387px] 2xl:h-[77px] md:w-[200px] md:h-[55px]
+  }
+
+  .ez-rent-image {
+    @apply 2xl:w-[527px] 2xl:h-[498px] md:w-[350px] md:h-[300px] mb-5 2xl:mt-28 xl:mt-10
+  }
+
+  .left-side-bottom-text {
+    @apply 2xl:text-[24px] xl:text-[15px] font-[500px] text-white italic 2xl:mt-10 xl:mt-5
+  }
+
+  /* right side */
+  .right-side-main-box {
+    @apply lg:mx-auto lg:mt-0 flex flex-col lg:justify-center justify-between lg:w-[60%] h-screen flex flex-col lg:justify-center justify-between 2xl:place-items-start xl:place-items-start md:place-items-center
+  }
+
+  .right-side-sub-box {
+    @apply xl:w-[70%] lg:w-[70%] w-[100%] flex flex-col lg:justify-center justify-between h-screen
+  }
+
+  .heading {
+    @apply 2xl:text-[48px] text-[40px] font-semibold text-center
+  }
+
+  .login-button {
+    @apply lg:w-[450px] w-full 2xl:mt-10 mt-5 2xl:h-[65px] h-[45px] rounded-full text-center text-white 2xl:text-[20px] text-[14px] bg-[#0F172A]
+  }
+
+  .bottom-bar {
+    @apply bg-[#404EED] lg:hidden block text-[13px] text-center w-full mx-auto py-2 text-white
+  }
+
+  /* home-page */
+  .home-page-shadow {
+    box-shadow: -5px 0px 36px 0px #00000026;
+
+  }
+
+  .explore-button {
+    box-shadow: 0px 8px 10px -6px #0000001A;
+
+    box-shadow: 0px 20px 25px -5px #0000001A;
+
+  }
+
+  .card-shadow {
+    box-shadow: 0px 4px 19px -3px #0000001A;
+
+  }
+
+  /* terms and condition */
+  .gradient-shade {
+    background: linear-gradient(127.19deg, #FF94C7 -0.36%, #404EED 116.31%);
+    width: 100%;
+    box-shadow: -5px 0px 36px 0px #00000026;
+
+  }
+
+  .back-shadow {
+    box-shadow: 0px 4px 51px 0px #00000014;
+
+  }
+
+  .but-shade {
+    box-shadow: 0px 5px 45px 0px #404EED66;
+
+  }
+
+  .black-button {
+    box-shadow: 0px 11px 45px 0px #00000026;
+
+  }
+
+  .background {
+    background: rgba(0, 133, 255, 0.1);
+  }
+
+}
+
+.hand-image {
+  background-image: url("/hand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.slick-slider .slick-list .slick-track {
+  margin-left: 0 !important
+}

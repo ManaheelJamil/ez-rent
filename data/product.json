@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "image": "/image1.png",
+        "heading": "BMW Series 8",
+        "price": "$40/d"
+    },
+    {
+        "id": 1,
+        "image": "/image2.png",
+        "heading": "Canon EOS R6",
+        "price": "$15/d"
+    },
+    {
+        "id": 2,
+        "image": "/image3.png",
+        "heading": "PlayStation 5",
+        "price": "$10/d"
+    },
+    {
+        "id": 3,
+        "image": "/image1.png",
+        "heading": "BMW Series 8",
+        "price": "$40/d"
+    },
+    {
+        "id": 4,
+        "image": "/image2.png",
+        "heading": "Canon EOS R6",
+        "price": "$15/d"
+    },
+    {
+        "id": 5,
+        "image": "/image3.png",
+        "heading": "PlayStation 5",
+        "price": "$10/d"
+    },
+    {
+        "id": 6,
+        "image": "/image1.png",
+        "heading": "BMW Series 8",
+        "price": "$40/d"
+    },
+    {
+        "id": 7,
+        "image": "/image2.png",
+        "heading": "Canon EOS R6",
+        "price": "$15/d"
+    }
+]
